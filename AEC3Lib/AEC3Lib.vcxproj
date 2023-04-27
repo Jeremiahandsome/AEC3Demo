@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{de064757-b0eb-434e-9311-201de0f3e493}</ProjectGuid>
+    <RootNamespace>AEC3Lib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>AEC3Demo</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\jeremiawang\source\repos\AEC3Lib\AEC3Lib\header;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\jeremiawang\source\repos\AEC3Lib\modules;C:\Users\jeremiawang\source\repos\AEC3Lib;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Users\jeremiawang\source\repos\AEC3Lib\modules;C:\Users\jeremiawang\source\repos\AEC3Lib;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;WEBRTC_WIN;NOMINMAX;AEC3WRAPPER_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\jeremiawang\source\repos\AEC3Lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;WEBRTC_WIN;WIN32;NOMINMAX;AEC3WRAPPER_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>Default</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;WEBRTC_WIN;WIN32;NOMINMAX;AEC3WRAPPER_EXPORTS;_CRT_SECURE_NO_WARNINGS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\absl\base\attributes.h" />
+    <ClInclude Include="..\absl\base\config.h" />
+    <ClInclude Include="..\absl\base\internal\identity.h" />
+    <ClInclude Include="..\absl\base\internal\inline_variable.h" />
+    <ClInclude Include="..\absl\base\internal\invoke.h" />
+    <ClInclude Include="..\absl\base\internal\throw_delegate.h" />
+    <ClInclude Include="..\absl\base\macros.h" />
+    <ClInclude Include="..\absl\base\optimization.h" />
+    <ClInclude Include="..\absl\base\options.h" />
+    <ClInclude Include="..\absl\base\policy_checks.h" />
+    <ClInclude Include="..\absl\base\port.h" />
+    <ClInclude Include="..\absl\memory\memory.h" />
+    <ClInclude Include="..\absl\meta\type_traits.h" />
+    <ClInclude Include="..\absl\strings\ascii.h" />
+    <ClInclude Include="..\absl\strings\internal\memutil.h" />
+    <ClInclude Include="..\absl\strings\string_view.h" />
+    <ClInclude Include="..\absl\types\bad_optional_access.h" />
+    <ClInclude Include="..\absl\types\internal\optional.h" />
+    <ClInclude Include="..\absl\types\optional.h" />
+    <ClInclude Include="..\absl\utility\utility.h" />
+    <ClInclude Include="..\api\array_view.h" />
+    <ClInclude Include="..\api\audio\audio_frame.h" />
+    <ClInclude Include="..\api\audio\audio_frame_processor.h" />
+    <ClInclude Include="..\api\audio\audio_mixer.h" />
+    <ClInclude Include="..\api\audio\channel_layout.h" />
+    <ClInclude Include="..\api\audio\echo_canceller3_config.h" />
+    <ClInclude Include="..\api\audio\echo_canceller3_factory.h" />
+    <ClInclude Include="..\api\audio\echo_control.h" />
+    <ClInclude Include="..\api\audio\echo_detector_creator.h" />
+    <ClInclude Include="..\api\scoped_refptr.h" />
+    <ClInclude Include="..\common_audio\channel_buffer.h" />
+    <ClInclude Include="..\common_audio\include\audio_util.h" />
+    <ClInclude Include="..\common_audio\resampler\push_sinc_resampler.h" />
+    <ClInclude Include="..\common_audio\resampler\sinc_resampler.h" />
+    <ClInclude Include="..\common_audio\signal_processing\include\signal_processing_library.h" />
+    <ClInclude Include="..\common_audio\third_party\ooura\fft_size_128\ooura_fft.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\adaptive_fir_filter.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\adaptive_fir_filter_erl.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\aec3_common.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\aec3_fft.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\aec_state.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\alignment_mixer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\api_call_jitter_metrics.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\block.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\block_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\block_delay_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\block_framer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\block_processor.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\block_processor_metrics.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\clockdrift_detector.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\coarse_filter_update_gain.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\comfort_noise_generator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\config_selector.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\decimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\delay_estimate.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\dominant_nearend_detector.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\downsampled_render_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\echo_audibility.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\echo_canceller3.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\echo_path_delay_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\echo_path_variability.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\echo_remover.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\echo_remover_metrics.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\erle_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\erl_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\fft_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\fft_data.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\filter_analyzer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\frame_blocker.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\fullband_erle_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\matched_filter.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\matched_filter_lag_aggregator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\moving_average.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\multi_channel_content_detector.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\nearend_detector.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\refined_filter_update_gain.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\render_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\render_delay_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\render_delay_controller.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\render_delay_controller_metrics.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\render_signal_analyzer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\residual_echo_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\reverb_decay_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\reverb_frequency_response.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\reverb_model.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\reverb_model_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\signal_dependent_erle_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\spectrum_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\stationarity_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\subband_erle_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\subband_nearend_detector.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\subtractor.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\subtractor_output.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\subtractor_output_analyzer.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\suppression_filter.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\suppression_gain.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\transparent_mode.h" />
+    <ClInclude Include="..\modules\audio_processing\aec3\vector_math.h" />
+    <ClInclude Include="..\modules\audio_processing\audio_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\echo_detector\circular_buffer.h" />
+    <ClInclude Include="..\modules\audio_processing\echo_detector\mean_variance_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\echo_detector\moving_max.h" />
+    <ClInclude Include="..\modules\audio_processing\echo_detector\normalized_covariance_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\high_pass_filter.h" />
+    <ClInclude Include="..\modules\audio_processing\include\audio_frame_proxies.h" />
+    <ClInclude Include="..\modules\audio_processing\include\audio_frame_view.h" />
+    <ClInclude Include="..\modules\audio_processing\include\audio_processing.h" />
+    <ClInclude Include="..\modules\audio_processing\include\audio_processing_statistics.h" />
+    <ClInclude Include="..\modules\audio_processing\include\mock_audio_processing.h" />
+    <ClInclude Include="..\modules\audio_processing\logging\apm_data_dumper.h" />
+    <ClInclude Include="..\modules\audio_processing\render_queue_item_verifier.h" />
+    <ClInclude Include="..\modules\audio_processing\residual_echo_detector.h" />
+    <ClInclude Include="..\modules\audio_processing\rms_level.h" />
+    <ClInclude Include="..\modules\audio_processing\splitting_filter.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\modules\audio_processing\three_band_filter_bank.h" />
+    <ClInclude Include="..\modules\audio_processing\utility\cascaded_biquad_filter.h" />
+    <ClInclude Include="..\modules\audio_processing\utility\delay_estimator.h" />
+    <ClInclude Include="..\modules\audio_processing\utility\delay_estimator_internal.h" />
+    <ClInclude Include="..\modules\audio_processing\utility\delay_estimator_wrapper.h" />
+    <ClInclude Include="..\modules\audio_processing\utility\pffft_wrapper.h" />
+    <ClInclude Include="..\rtc_base\arraysize.h" />
+    <ClInclude Include="..\rtc_base\checks.h" />
+    <ClInclude Include="..\rtc_base\experiments\field_trial_parser.h" />
+    <ClInclude Include="..\rtc_base\gtest_prod_util.h" />
+    <ClInclude Include="..\rtc_base\logging.h" />
+    <ClInclude Include="..\rtc_base\memory\aligned_malloc.h" />
+    <ClInclude Include="..\rtc_base\numerics\safe_compare.h" />
+    <ClInclude Include="..\rtc_base\platform_thread.h" />
+    <ClInclude Include="..\rtc_base\platform_thread_types.h" />
+    <ClInclude Include="..\rtc_base\race_checker.h" />
+    <ClInclude Include="..\rtc_base\ref_count.h" />
+    <ClInclude Include="..\rtc_base\strings\audio_format_to_string.h" />
+    <ClInclude Include="..\rtc_base\strings\string_builder.h" />
+    <ClInclude Include="..\rtc_base\strings\string_format.h" />
+    <ClInclude Include="..\rtc_base\string_encode.h" />
+    <ClInclude Include="..\rtc_base\string_utils.h" />
+    <ClInclude Include="..\rtc_base\swap_queue.h" />
+    <ClInclude Include="..\rtc_base\synchronization\mutex.h" />
+    <ClInclude Include="..\rtc_base\synchronization\mutex_critical_section.h" />
+    <ClInclude Include="..\rtc_base\system\arch.h" />
+    <ClInclude Include="..\rtc_base\system\file_wrapper.h" />
+    <ClInclude Include="..\rtc_base\system\inline.h" />
+    <ClInclude Include="..\rtc_base\system\rtc_export.h" />
+    <ClInclude Include="..\rtc_base\system_time.h" />
+    <ClInclude Include="..\rtc_base\thread_annotations.h" />
+    <ClInclude Include="..\rtc_base\time_utils.h" />
+    <ClInclude Include="..\rtc_base\type_traits.h" />
+    <ClInclude Include="..\system_wrappers\include\cpu_info.h" />
+    <ClInclude Include="..\system_wrappers\include\field_trial.h" />
+    <ClInclude Include="..\system_wrappers\include\metrics.h" />
+    <ClInclude Include="..\third_party\pffft\src\pffft.h" />
+    <ClInclude Include="wave_file.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\absl\base\internal\throw_delegate.cc" />
+    <ClCompile Include="..\absl\strings\ascii.cc" />
+    <ClCompile Include="..\absl\strings\internal\memutil.cc" />
+    <ClCompile Include="..\absl\strings\string_view.cc" />
+    <ClCompile Include="..\absl\types\bad_optional_access.cc" />
+    <ClCompile Include="..\api\audio\audio_frame.cc" />
+    <ClCompile Include="..\api\audio\channel_layout.cc" />
+    <ClCompile Include="..\api\audio\echo_canceller3_config.cc" />
+    <ClCompile Include="..\api\audio\echo_canceller3_factory.cc" />
+    <ClCompile Include="..\api\audio\echo_detector_creator.cc" />
+    <ClCompile Include="..\common_audio\audio_util.cc" />
+    <ClCompile Include="..\common_audio\channel_buffer.cc" />
+    <ClCompile Include="..\common_audio\resampler\push_sinc_resampler.cc" />
+    <ClCompile Include="..\common_audio\resampler\sinc_resampler.cc" />
+    <ClCompile Include="..\common_audio\resampler\sinc_resampler_avx2.cc" />
+    <ClCompile Include="..\common_audio\resampler\sinc_resampler_sse.cc" />
+    <ClCompile Include="..\common_audio\signal_processing\splitting_filter.c" />
+    <ClCompile Include="..\common_audio\third_party\ooura\fft_size_128\ooura_fft.cc" />
+    <ClCompile Include="..\common_audio\third_party\ooura\fft_size_128\ooura_fft_sse2.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\adaptive_fir_filter.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\adaptive_fir_filter_avx2.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\adaptive_fir_filter_erl.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\adaptive_fir_filter_erl_avx2.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\aec3_common.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\aec3_fft.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\aec_state.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\alignment_mixer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\api_call_jitter_metrics.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\block_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\block_delay_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\block_framer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\block_processor.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\block_processor_metrics.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\clockdrift_detector.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\coarse_filter_update_gain.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\comfort_noise_generator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\config_selector.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\decimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\dominant_nearend_detector.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\downsampled_render_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\echo_audibility.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\echo_canceller3.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\echo_path_delay_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\echo_path_variability.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\echo_remover.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\echo_remover_metrics.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\erle_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\erl_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\fft_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\fft_data_avx2.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\filter_analyzer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\frame_blocker.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\fullband_erle_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\matched_filter.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\matched_filter_avx2.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\matched_filter_lag_aggregator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\moving_average.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\multi_channel_content_detector.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\refined_filter_update_gain.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\render_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\render_delay_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\render_delay_controller.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\render_delay_controller_metrics.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\render_signal_analyzer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\residual_echo_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\reverb_decay_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\reverb_frequency_response.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\reverb_model.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\reverb_model_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\signal_dependent_erle_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\spectrum_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\stationarity_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\subband_erle_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\subband_nearend_detector.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\subtractor.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\subtractor_output.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\subtractor_output_analyzer.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\suppression_filter.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\suppression_gain.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\transparent_mode.cc" />
+    <ClCompile Include="..\modules\audio_processing\aec3\vector_math_avx2.cc" />
+    <ClCompile Include="..\modules\audio_processing\audio_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\echo_detector\circular_buffer.cc" />
+    <ClCompile Include="..\modules\audio_processing\echo_detector\mean_variance_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\echo_detector\moving_max.cc" />
+    <ClCompile Include="..\modules\audio_processing\echo_detector\normalized_covariance_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\high_pass_filter.cc" />
+    <ClCompile Include="..\modules\audio_processing\include\audio_frame_proxies.cc" />
+    <ClCompile Include="..\modules\audio_processing\include\audio_processing.cc" />
+    <ClCompile Include="..\modules\audio_processing\include\audio_processing_statistics.cc" />
+    <ClCompile Include="..\modules\audio_processing\logging\apm_data_dumper.cc" />
+    <ClCompile Include="..\modules\audio_processing\residual_echo_detector.cc" />
+    <ClCompile Include="..\modules\audio_processing\rms_level.cc" />
+    <ClCompile Include="..\modules\audio_processing\splitting_filter.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\modules\audio_processing\three_band_filter_bank.cc" />
+    <ClCompile Include="..\modules\audio_processing\utility\cascaded_biquad_filter.cc" />
+    <ClCompile Include="..\modules\audio_processing\utility\delay_estimator.cc" />
+    <ClCompile Include="..\modules\audio_processing\utility\delay_estimator_wrapper.cc" />
+    <ClCompile Include="..\modules\audio_processing\utility\pffft_wrapper.cc" />
+    <ClCompile Include="..\rtc_base\checks.cc" />
+    <ClCompile Include="..\rtc_base\experiments\field_trial_parser.cc" />
+    <ClCompile Include="..\rtc_base\logging.cc" />
+    <ClCompile Include="..\rtc_base\memory\aligned_malloc.cc" />
+    <ClCompile Include="..\rtc_base\platform_thread.cc" />
+    <ClCompile Include="..\rtc_base\platform_thread_types.cc" />
+    <ClCompile Include="..\rtc_base\race_checker.cc" />
+    <ClCompile Include="..\rtc_base\strings\audio_format_to_string.cc" />
+    <ClCompile Include="..\rtc_base\strings\string_builder.cc" />
+    <ClCompile Include="..\rtc_base\strings\string_format.cc" />
+    <ClCompile Include="..\rtc_base\string_encode.cc" />
+    <ClCompile Include="..\rtc_base\string_utils.cc" />
+    <ClCompile Include="..\rtc_base\system\file_wrapper.cc" />
+    <ClCompile Include="..\rtc_base\system_time.cc" />
+    <ClCompile Include="..\rtc_base\time_utils.cc" />
+    <ClCompile Include="..\system_wrappers\source\cpu_features.cc" />
+    <ClCompile Include="..\system_wrappers\source\cpu_info.cc" />
+    <ClCompile Include="..\system_wrappers\source\field_trial.cc" />
+    <ClCompile Include="..\system_wrappers\source\metrics.cc" />
+    <ClCompile Include="..\third_party\pffft\src\pffft.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="wave_file.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\modules\audio_processing\aec3\BUILD.gn" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
