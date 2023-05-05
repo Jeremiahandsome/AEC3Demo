@@ -84,7 +84,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\jeremiawang\source\repos\AEC3Lib\modules;C:\Users\jeremiawang\source\repos\AEC3Lib;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\jeremiawang\source\repos\AEC3Demo\modules;C:\Users\jeremiawang\source\repos\AEC3Demo;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

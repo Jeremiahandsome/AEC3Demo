@@ -64,8 +64,6 @@ int main(int argc, char* argv[]) {
     int samples_per_frame = sample_rate1 * num_channels1 / 100;
     int total = audio1_samples > audio2_samples ? audio2_samples / samples_per_frame: 
         audio1_samples / samples_per_frame;
-    //long long bytes_per_frame = samples_per_frame * bits_per_sample1 / 8;
-
 
     webrtc::EchoCanceller3Config config;
     config.filter.export_linear_aec_output = true;
@@ -98,8 +96,8 @@ int main(int argc, char* argv[]) {
     int current = 0;
     while (current++ < total) {
         print_progress(current, total);
-        wav_reader1.Read(audio_data1,samples_per_frame);
-        wav_reader2.Read(audio_data2,samples_per_frame);
+        wav_reader1.Read(audio_data1, samples_per_frame);
+        wav_reader2.Read(audio_data2, samples_per_frame);
 
         audio_buffer1->CopyFrom(audio_data1, stream_config);
         audio_buffer2->CopyFrom(audio_data2, stream_config);
